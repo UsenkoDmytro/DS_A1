@@ -1,6 +1,6 @@
 package nonService;
 
-public enum menu{
+public enum Menu{
     Burger("Burger", 5),
     BurgerXL("BurgerXL", 7),
     Vegan("Vegan", 4),
