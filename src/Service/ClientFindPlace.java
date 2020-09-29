@@ -14,9 +14,10 @@ public final class ClientFindPlace {
 
     public void ClientTryFindSit(Client client){
         FoundAPlace = false;
-        if(cafe.getFreeTableAmount() != 0 & !client.getIsBusy())
+        if(cafe.getFreeTableAmount() != 0 && !client.getIsBusy()) {
             cafe.ClientIn();
             FoundAPlace = true;
+        }
     }
 
     @Override

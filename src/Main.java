@@ -47,8 +47,7 @@ public class Main {
 
         clientExit.ClintGoAway(client1);
         System.out.println(clientExit.toString());
-        clientExit.ClintGoAway(client2);
-        System.out.println(clientExit.toString());
+
 
         daysStats.Profit();
         System.out.println(daysStats.toString());

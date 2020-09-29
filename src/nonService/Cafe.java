@@ -18,10 +18,6 @@ public final class Cafe {
         return FreeTableAmount;
     }
 
-    public void setQuarantineTableAmount() {
-        FreeTableAmount /=  2;
-    }
-
     public void ClientIn() {
         FreeTableAmount--;
     }
