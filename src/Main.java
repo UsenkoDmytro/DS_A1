@@ -39,7 +39,7 @@ public class Main {
         System.out.println(clientEntrance.toString());
 
         ServiceOrder serviceOrder2 = new ServiceOrder(Menu.BurgerXL);
-        serviceOrder1.OrderMade(client2, selfCheckout);
+        serviceOrder2.OrderMade(client2, selfCheckout);
         System.out.println(serviceOrder1.toString());
 
         clientFindPlace.ClientTryFindSit(client2);
@@ -67,7 +67,7 @@ public class Main {
         System.out.println(clientEntrance.toString());
 
         ServiceOrder serviceOrder3 = new ServiceOrder(Menu.Vegan);
-        serviceOrder1.OrderMade(client3, selfCheckout);
+        serviceOrder3.OrderMade(client3, selfCheckout);
         System.out.println(serviceOrder3.toString());
 
         clientFindPlace.ClientTryFindSit(client3);
@@ -79,7 +79,7 @@ public class Main {
         System.out.println(clientEntrance.toString());
 
         ServiceOrder serviceOrder4 = new ServiceOrder(Menu.Chicken);
-        serviceOrder1.OrderMade(client4, selfCheckout);
+        serviceOrder4.OrderMade(client4, selfCheckout);
         System.out.println(serviceOrder4.toString());
 
         clientFindPlace.ClientTryFindSit(client4);
