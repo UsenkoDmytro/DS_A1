@@ -1,25 +1,29 @@
 package Service;
 
-import nonService.Admin;
-import nonService.Cafe;
-import nonService.Quarantine;
+import nonService.*;
 
 public final class QuarantineStarted {
 
-    Admin admin;
+    private final Cafe cafe;
 
-    public QuarantineStarted(Quarantine quarantine, Cafe cafe, Admin admin){
-        quarantine.QuarantineHasStarted();
-        this.admin = admin;
-        cafe.setBills(3);
+    public QuarantineStarted(Cafe cafe){
+        this.cafe = cafe;
+        this.cafe.quarantineHasStarted();
     }
 
+    public void quarantineBills(int bills){
+        cafe.changeBills(bills);
+        System.out.println("Due to quarantine mode bills are increased on " + bills);
+    }
+
+    public void quarantineTables(int numTables){
+        cafe.setNumFreeTables(numTables);
+        System.out.println("The number of tables has been reduced by half " +
+                            "due to the quarantine restriction");
+    }
 
     @Override
     public String toString() {
-        if (admin.getIsInfested())
-            return "Cafe is closed for Quarantine because Admin had Virus";
-
-        return "Cafe working in Quarantine mode\n\n";
+       return "Cafe working in Quarantine mode\n\n";
     }
 }

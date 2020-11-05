@@ -1,32 +1,47 @@
 package nonService;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 public final class Cafe {
 
-    private int FreeTableAmount;
+    private int numFreeTables;
+    private final List<Table> tables;
     private int bills;
-    private int BankAccount;
+    private boolean quarantine;
 
     public Cafe(int FreeTableAmount, int bills) {
-        this.FreeTableAmount = FreeTableAmount;
+        this.numFreeTables = FreeTableAmount;
         this.bills = bills;
-        this.BankAccount = 1000;
-             }
-
-    public int getFreeTableAmount() {
-        return FreeTableAmount;
+        this.quarantine = false;
+        tables = new ArrayList<>();
     }
 
-    public void ClientIn() {
-        FreeTableAmount--;
+    public void addTable(int numPlace) {
+        this.tables.add(new Table(numPlace));
     }
 
-    public void ClientOut() {
-        FreeTableAmount++;
+    public List<Table> getTables() {
+        return tables;
     }
 
-    public void setBills(int bills){
+    public void setNumFreeTables(int numTables) {
+        this.numFreeTables = numTables;
+    }
+
+    public int getNumFreeTables() {
+        return numFreeTables;
+    }
+
+    public void clientIn() {
+        numFreeTables = numFreeTables - 1;
+    }
+
+    public void clientOut() {
+        numFreeTables = numFreeTables + 1;
+    }
+
+    public void changeBills(int bills){
         this.bills += bills;
     }
 
@@ -34,13 +49,12 @@ public final class Cafe {
         return bills;
     }
 
-    public int getBankAccount(){
-        return BankAccount;
+    public void quarantineHasStarted(){
+        this.quarantine = true;
     }
 
-    public void setBankAccount(int profit){
-        this.BankAccount += profit;
+    public boolean getQuarantine(){
+        return quarantine;
     }
-
 }
 

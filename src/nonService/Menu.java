@@ -1,10 +1,12 @@
 package nonService;
 
 public enum Menu{
-    Burger("Burger", 5),
-    BurgerXL("BurgerXL", 7),
-    Vegan("Vegan", 4),
-    Chicken("Chicken", 6);
+    Pizza("Pizza", 45),
+    Spaghetti("Spaghetti", 40),
+    Salad("Salad", 35),
+    WineG("Glass of wine", 25),
+    WineB("Bottle of wine", 65);
+
 
     private final String name;
     private final int price;

@@ -10,15 +10,19 @@ public final class Admin {
         this.salary = salary;
     }
 
-    public void setIsInfested(){
+    public void isInfested(){
         isInfested = true;
+    }
+
+    public void isRecovered(){
+        isInfested = false;
     }
 
     public boolean getIsInfested(){
         return isInfested;
     }
 
-    public int GetSalary(){
+    public int getSalary(){
         return salary;
     }
 }
